@@ -3,8 +3,8 @@ import React from 'react';
 
 function Movielist(){
 
-    <section className="movielist">
-            <ul className="movielist_container">
+    <section className="movielistContainer">
+            <ul className="movielistContainer--list">
         
             </ul>
     </section>

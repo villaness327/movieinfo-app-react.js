@@ -9,5 +9,4 @@ import React from 'react';
          );
     }
 
-
 export {Movielogo};

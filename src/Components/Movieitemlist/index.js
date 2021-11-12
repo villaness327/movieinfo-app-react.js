@@ -5,7 +5,7 @@ function Movieitemlist(){
 
 return(
 
-            <li></li>
+            <li className="movieItemList"></li>
 
 
 );

@@ -2,6 +2,11 @@ import React from 'react';
 import {Movieheader} from '../Movieheader';
 import {Movielogo} from '../Movielogo';
 import {Moviemenu} from '../Moviemenu';
+import {Movielist } from '../Movielist';
+import {Movieitemlist } from '../Movieitemlist';
+import {Moviesearch} from '../Moviesearch';
+import {Moviemainlist} from '../Moviemainlist';
+import {Moviemainitemlist} from '../Moviemainitemlist';
  
 
 function App() {
@@ -20,17 +25,15 @@ function App() {
         
         </Movielist >
 
-        <Moviesearch>
+        <Moviesearch/>
 
-           <Moviesearchbox/>
-
-        </Moviesearch>
+       
 
         <Moviemainlist>
 
             <Moviemainitemlist />
 
-</Moviemainlist>
+        </Moviemainlist>
 
 
 
