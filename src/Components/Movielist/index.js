@@ -2,6 +2,7 @@ import React from 'react';
 
 
 function Movielist(){
+    return(
 
     <section className="movielistContainer">
             <ul className="movielistContainer--list">
@@ -9,7 +10,7 @@ function Movielist(){
             </ul>
     </section>
 
-
+    );
 
 
 }
