@@ -3,7 +3,7 @@ import './movieheader.css';
 
 function Movieheader({children}){
     return(
-        <header classname="headerContainer">
+        <header className="headerContainer">
           {children}
         </header>        
     );

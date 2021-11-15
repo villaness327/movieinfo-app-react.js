@@ -1,10 +1,11 @@
 import React from 'react';
+import {Logo} from './Logo';
 
 
     function Movielogo(){
          return(
-          <div>
-            <h2>Aqui va el logo</h2>
+          <div className="movielogo">
+              <Logo />
           </div>
          );
     }
