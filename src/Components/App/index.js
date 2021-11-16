@@ -5,11 +5,17 @@ import {Moviemenu} from '../Moviemenu';
 import {Movielist } from '../Movielist';
 import {Movieitemlist } from '../Movieitemlist';
 import {Moviesearch} from '../Moviesearch';
-import {Moviemainlist} from '../Moviemainlist';
-import {Moviemainitemlist} from '../Moviemainitemlist';
+
  
 
 function App() {
+
+
+
+
+
+
+  
   return (
 
     <React.Fragment>
@@ -18,29 +24,16 @@ function App() {
             <Movielogo/>
             <Moviemenu/>
         </Movieheader>
+        
+        <Moviesearch/>
 
+    
+       
         <Movielist>
         
             <Movieitemlist/>        
         
         </Movielist >
-
-        <Moviesearch/>
-
-       
-
-        <Moviemainlist>
-
-            <Moviemainitemlist />
-
-        </Moviemainlist>
-
-
-
-
-
-
-
 
 
     </React.Fragment>

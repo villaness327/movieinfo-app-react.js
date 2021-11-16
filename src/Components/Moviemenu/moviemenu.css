@@ -1,4 +1,10 @@
 .menu{
 
-    color:white;
+  background-image: url(./menu.png);
+  width: 30px;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  margin-right:10px;
+  cursor: pointer;
 }
