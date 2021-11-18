@@ -1,31 +1,22 @@
 import React from 'react';
 
-function Moviesearch(){
+function Moviesearch({searchValue,setSearchValue}){
 
         function onSearch(event){
 
-
-          console.log(event);
-
-
-
-
+          setSearchValue(event.target.value);
 
         }
-
-
-
-
 
         return(
 
             <section className="searchContainer">
 
                <input className="inputSearch"
-
+               value={searchValue}
                
                placeholder="Busque una Pelicula..." 
-               autofocus
+         
                onChange={onSearch}
                />
 
