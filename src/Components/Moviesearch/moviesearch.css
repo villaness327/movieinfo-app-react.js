@@ -1,0 +1,22 @@
+.searchContainer{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.inputSearch{
+    width: 75%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    border:none;
+    text-align: center;
+}
+
+.inputSearch:focus{
+
+  outline-color:cyan;
+
+}

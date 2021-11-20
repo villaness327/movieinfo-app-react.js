@@ -1,27 +1,33 @@
 import React from 'react';
+import './moviesearch.css';
 
-function Moviesearch({searchValue,setSearchValue}){
+function Moviesearch(props){
 
         function onSearch(event){
 
-          setSearchValue(event.target.value);
+          props.setSearchValue(event.target.value);
 
+       
+          
         }
 
         return(
-
+      
             <section className="searchContainer">
 
                <input className="inputSearch"
-               value={searchValue}
-               
-               placeholder="Busque una Pelicula..." 
-         
+               value={props.searchValue}               
+               placeholder="Busque una Pelicula..."          
                onChange={onSearch}
                />
-
+         
             </section>
+             
+
+
         );
+
+
 }
 
 export {Moviesearch}

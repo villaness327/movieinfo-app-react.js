@@ -1,0 +1,14 @@
+.container__results{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.containter__results--item{
+    background-color: dimgrey;
+    width: 70%;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
