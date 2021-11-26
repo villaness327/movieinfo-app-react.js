@@ -5,16 +5,19 @@ import {Moviemenu} from '../Moviemenu';
 import {Movielist } from '../Movielist';
 import {Movieitemlist } from '../Movieitemlist';
 import {Moviesearch} from '../Moviesearch';
-import {Error} from '../Error';
+//import {Error} from '../Error';
 import {Movieresults} from '../Movieresults';
 import {useFetchMovie} from './useFetchMovie'; 
 
 function App() {
 
 const { 
-        searchValue,
-        setSearchValue,    
-        error,
+  searchValue,
+  setSearchValue,
+  results,
+  search,
+  setSearch,
+  loading,
 
 }=useFetchMovie(); //Llamada a custom hook
   
@@ -27,21 +30,21 @@ const {
             <Moviemenu/>
         </Movieheader>
         
-        <Moviesearch
-        
+        <Moviesearch   
+             
           searchValue={searchValue}
           setSearchValue={setSearchValue}
-
-
-
+          setSearch={setSearch}
+          search={search}
         />
 
          
-         <Movieresults 
-         
-         error={error}
+        <Movieresults 
 
-         onError={()=><Error/>}
+          loading={loading}
+          results={results}
+
+          onLoading={()=><Loading/>}
 
          />
 

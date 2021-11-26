@@ -5,17 +5,22 @@ const key='74d6303e';
 function useFetchMovie(){
 
     const [searchValue,setSearchValue]=React.useState(''); //Estado de Busqueda
-    const [result,setResult]=React.useState(''); //Estado que guarda los resultados
-   // const [error,setError]=React.useState('');//Estado que guarda el error
-    const url=`http://www.omdbapi.com/?apikey=${key}&s=${searchValue}`;    
+    const [loading,setLoading]=React.useState(false);
+    const [error,setError]=React.useState('');//Estado que guarda el error
+    const [results,setResults]=React.useState([]); //Estado que guarda los resultados
   
+  
+   
+
+
+    const url=`http://www.omdbapi.com/?apikey=${key}&s=${searchValue}`;    
+
        
     React.useEffect(()=>{//use Effect se ejecuta cada vez que el estado searchValue cambia 
-            
-        if(searchValue){
-            fetchAPI();    
-
-        }
+         
+        setLoading(true);
+      
+            fetchAPI();  
               
    
     },[searchValue]); 
@@ -26,11 +31,12 @@ function useFetchMovie(){
             try{
              
                
-                const data=await fetch(url);//Fetch a API        
+                const response=await fetch(url);//Fetch a API        
                     
-                const response=await data.json();//Datos  formato JSON
-                setResult(response);  
-                console.log(response);           
+                const data=await response.json();
+                setResults([data.Search]);
+    
+                         
 
             }catch(error){
 
@@ -39,13 +45,15 @@ function useFetchMovie(){
             }
         }
      
-     
-  
+      
 
     return{ //Este custom hook retorna las propiedades para componente App
         searchValue,
         setSearchValue,
-        result,
+        results,
+        search,
+        setSearch,
+        loading,
 
     }
 
