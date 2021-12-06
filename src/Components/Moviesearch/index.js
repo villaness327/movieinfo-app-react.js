@@ -3,19 +3,7 @@ import './moviesearch.css';
 
 function Moviesearch(props){
 
-
-
-       function onSearch(event) {
- 
-        props.setSearchValue(event.target.value);
-        
-
-     
-       }
-
-   
-
-
+      
         return(
 
     
@@ -24,14 +12,11 @@ function Moviesearch(props){
                <input className="inputSearch"
                value={props.searchValue}               
                placeholder="Busque una Pelicula..."         
-               onChange={onSearch}/>        
-         
-            </section>
-      
-     
+               onChange={(event) => props.setSearchValue(event.target.value)}            
+             ></input>
+             </section>
 
-
-        );
+        )
 
 
 }

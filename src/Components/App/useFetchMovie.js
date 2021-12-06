@@ -1,64 +1,59 @@
 import React from 'react';
-const key='74d6303e';
-
 
 function useFetchMovie(){
 
     const [searchValue,setSearchValue]=React.useState(''); //Estado de Busqueda
-    const [loading,setLoading]=React.useState(false);
+    const [results,setResults]=React.useState(false);
     const [error,setError]=React.useState('');//Estado que guarda el error
-    const [results,setResults]=React.useState([]); //Estado que guarda los resultados
-  
-  
+    const [movie,setMovie]=React.useState([]); //Estado que guarda los resultados
    
 
+    const fetchAPI=async(searchValue)=>{
 
-    const url=`http://www.omdbapi.com/?apikey=${key}&s=${searchValue}`;    
+        const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=74d6303e`;  
 
-       
-    React.useEffect(()=>{//use Effect se ejecuta cada vez que el estado searchValue cambia 
-         
-        setLoading(true);
-      
-            fetchAPI();  
-              
-   
-    },[searchValue]); 
-   
-   
-    async function fetchAPI(){
-
-            try{
-             
-               
-                const response=await fetch(url);//Fetch a API        
+            try{                        
+                const response=await fetch(url);//Fetch a la API        
                     
-                const data=await response.json();
-                setResults([data.Search]);
-    
-                         
+                const data=await response.json(); //Se convierte a JSON              
 
+               if (data.Search) {
+                    setMovie(data.Search);                   
+                    setResults(true);       
+                }   
+                        
+           
             }catch(error){
 
-                console.log(error);
+                    setError(error);
 
             }
-        }
+    }
      
-      
+    React.useEffect(()=>{//use Effect se ejecuta cada vez que el estado searchValue cambia               
+     
+              
+        fetchAPI(searchValue);   
+        console.log(searchValue);
+        
+          
+       
+    },[searchValue]);
+            
+    return{//Este custom hook retorna las propiedades para componente App
 
-    return{ //Este custom hook retorna las propiedades para componente App
+
         searchValue,
-        setSearchValue,
         results,
-        search,
-        setSearch,
-        loading,
+        error,
+        setSearchValue,
+        movie,
+  
+     
+   
+
 
     }
-
-
-   
 }
 
 export {useFetchMovie};
