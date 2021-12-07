@@ -53,10 +53,10 @@ const {
           onLoading={()=><Loading/>}
           onEmptySearchResults={()=><Emptysearchresults/>}
 
-          onRender={movie=>(
+          onRender={(movie,index)=>(
 
               <Movieresultslist
-              
+                 id={index} 
                  poster={movie.Poster}
               
               

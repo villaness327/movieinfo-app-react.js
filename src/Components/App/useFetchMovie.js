@@ -10,7 +10,7 @@ function useFetchMovie(){
 
     const fetchAPI=async(searchValue)=>{
 
-        const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=74d6303e`;  
+        const url = `http://www.omdbapi.com/?s=${searchValue}&type=movie&apikey=74d6303e`;  
 
             try{                        
                 const response=await fetch(url);//Fetch a la API        
