@@ -53,17 +53,15 @@ const {
           onLoading={()=><Loading/>}
           onEmptySearchResults={()=><Emptysearchresults/>}
 
-          onRender={movie=>(
+          onRender={movies=>(
 
               <Movieresultslist
-              
-                 poster={movie.Poster}
-              
+
+                 id={movies.imdbID}
+                 poster={movies.Poster}    
+                          
               
               />
-
-
-
           )}
 
          />       
