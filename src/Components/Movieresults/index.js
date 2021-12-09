@@ -9,7 +9,7 @@ function Movieresults(props){
      <section className="container__results">
             <div className="containter__results--item">
                 <ul>  
-                {props.searchValue!=="" && props.movie.map((movies,index)=>props.onRender(movies,index))}  
+                {props.searchValue!=="" && props.movie.map(movies=>props.onRender(movies))}  
                 </ul>
             </div>           
      </section>
