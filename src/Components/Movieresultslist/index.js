@@ -9,7 +9,7 @@ function Movieresultslist(props){
 
     return(        
 
-        <li className='liMovie' key={props.id}><img src={props.poster} alt="movie"></img></li>
+        <div className='itemResult'><img src={props.poster} alt="movie" className='itemImg'></img></div>
 
     );
     

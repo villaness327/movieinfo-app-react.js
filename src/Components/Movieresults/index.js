@@ -11,9 +11,9 @@ function Movieresults(props){
 
      <section className="container__results">
             <div className="containter__results--item">
-                <ul>  
+                <div className='containerResults'>
                 {props.searchValue!=="" && arrSinDuplicaciones.map(movies=>props.onRender(movies))}  
-                </ul>
+                </div>
             </div>           
      </section>
     );

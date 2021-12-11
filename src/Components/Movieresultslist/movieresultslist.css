@@ -1,6 +1,21 @@
-.liMovie{
 
- list-style: none;
+
+.itemResult{
+  width: 100vw;
+  margin-left: 0;
+}
+
+.itemImg{
+
+  border-radius: 10px;
+  width: 180px;
+  height: auto;  
+
+}
+
+.itemImg:hover{
+
+ transform:scale(1.2); 
 
 
 

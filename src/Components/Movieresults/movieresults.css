@@ -12,3 +12,12 @@
     margin: 0 auto;
     margin-top: 10px;
 }
+
+.containerResults{
+
+  display: flex;
+  overflow: hidden;
+  width: 100vw;
+ 
+
+}
