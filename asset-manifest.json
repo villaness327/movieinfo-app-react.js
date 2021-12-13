@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/movieinfo-app-react.js/static/css/main.fbce0fda.chunk.css",
-    "main.js": "/movieinfo-app-react.js/static/js/main.3701f3ab.chunk.js",
-    "main.js.map": "/movieinfo-app-react.js/static/js/main.3701f3ab.chunk.js.map",
+    "main.css": "/movieinfo-app-react.js/static/css/main.186d6ea2.chunk.css",
+    "main.js": "/movieinfo-app-react.js/static/js/main.573e688a.chunk.js",
+    "main.js.map": "/movieinfo-app-react.js/static/js/main.573e688a.chunk.js.map",
     "runtime-main.js": "/movieinfo-app-react.js/static/js/runtime-main.8c12d559.js",
     "runtime-main.js.map": "/movieinfo-app-react.js/static/js/runtime-main.8c12d559.js.map",
     "static/js/2.83d2fb62.chunk.js": "/movieinfo-app-react.js/static/js/2.83d2fb62.chunk.js",
     "static/js/2.83d2fb62.chunk.js.map": "/movieinfo-app-react.js/static/js/2.83d2fb62.chunk.js.map",
     "index.html": "/movieinfo-app-react.js/index.html",
-    "static/css/main.fbce0fda.chunk.css.map": "/movieinfo-app-react.js/static/css/main.fbce0fda.chunk.css.map",
+    "static/css/main.186d6ea2.chunk.css.map": "/movieinfo-app-react.js/static/css/main.186d6ea2.chunk.css.map",
     "static/js/2.83d2fb62.chunk.js.LICENSE.txt": "/movieinfo-app-react.js/static/js/2.83d2fb62.chunk.js.LICENSE.txt",
     "static/media/moviemenu.css": "/movieinfo-app-react.js/static/media/menu.89f6a61b.png",
     "static/media/movie-camera.d4441d55.svg": "/movieinfo-app-react.js/static/media/movie-camera.d4441d55.svg"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.8c12d559.js",
     "static/js/2.83d2fb62.chunk.js",
-    "static/css/main.fbce0fda.chunk.css",
-    "static/js/main.3701f3ab.chunk.js"
+    "static/css/main.186d6ea2.chunk.css",
+    "static/js/main.573e688a.chunk.js"
   ]
 }
