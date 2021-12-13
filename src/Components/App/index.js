@@ -3,14 +3,14 @@ import {Movieheader} from '../Movieheader';
 import {Movielogo} from '../Movielogo';
 import {Moviemenu} from '../Moviemenu';
 import {Moviesearch} from '../Moviesearch';
-//import {Error} from '../Error';
-import {Movieresults} from '../Movieresults';
+import {Moviepopular} from '../Moviepopular';
 import {Loading} from '../Loading';
-import{Emptysearchresults} from '../Emptysearchresults';
-import{Movieresultslist} from '../Movieresultslist';
-import{Moviefav} from '../Moviefav';
+import {Emptysearchresults} from '../Emptysearchresults';
+import {Moviepopularlist} from '../Moviepopularlist';
+import {Moviefav} from '../Moviefav';
 import {Moviefavlist} from '../Moviefavlist';
 import {useFetchMovie} from './useFetchMovie'; 
+import {Error} from '../Error';
 
  
 function App() {
@@ -21,8 +21,6 @@ const {
   error,
   setSearchValue,
   movie,
-
- 
 
 }=useFetchMovie(); //Llamada a custom hook
   
@@ -40,17 +38,19 @@ const {
           setSearchValue={setSearchValue}        
         />
          
-        <Movieresults          
-          movie={movie}
-          loading={loading}
-          onLoading={()=><Loading/>}
+        <Moviepopular          
+          movie={movie} //Array de peliculas
+          loading={loading} //estado loading
+          error={error}    
+          onLoading={()=><Loading/>} //funcion asociado al estado loading        
+          onError={()=><Error/>}
           onEmptySearchResults={()=><Emptysearchresults/>}
 
           onRender={movies=>(
-
-              <Movieresultslist
-                 id={movies.id}
-                 poster={movies.poster_path}              
+              <Moviepopularlist
+                 key={movies.id}
+                 poster={movies.poster_path}  
+                 title={movies.title}            
               />
           )}
          />       

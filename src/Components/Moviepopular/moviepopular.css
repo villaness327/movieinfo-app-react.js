@@ -1,0 +1,29 @@
+.popularMovies{
+  width: 100%;
+  margin-top: 30px;
+  padding-left: 30px;
+
+}
+
+.popularMoviesTitle{
+  color: white;
+  margin-bottom:10px;
+  font-size: 1.5rem;
+}
+
+.popularMoviesContainer{
+
+  display: flex;
+  overflow: scroll;
+  white-space: nowrap;
+
+}
+
+
+
+
+
+
+
+
+

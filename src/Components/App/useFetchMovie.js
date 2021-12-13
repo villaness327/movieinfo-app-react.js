@@ -20,8 +20,10 @@ function useFetchMovie(){
                 const data=await response.json(); //Se convierte a JSON              
 
                if (data.results) {               
-                    setMovie(data.results);                   
-                    setLoading(false);       
+                    setMovie(data.results); 
+                                   
+                    setLoading(false);  
+               
                 }   
                         
            
@@ -32,10 +34,9 @@ function useFetchMovie(){
             }
     }
      
-    React.useEffect(()=>{//use Effect se ejecuta cada vez que el estado searchValue cambia      
+    React.useEffect(()=>{//use Effect se ejecuta      
               
-        getPopularsMovies();   
-  
+        getPopularsMovies();    
                
     },[]);
             

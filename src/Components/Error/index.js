@@ -1,11 +1,11 @@
 import React from 'react';
 
 
-function Error(){
+function Error(props){
 
     return(
 
-      <p>Ocurrio un error</p>
+      <p>Ocurrio un error {props.error}</p>
 
     );
 
