@@ -7,7 +7,7 @@
 
 .itemImg{
 
-  border-radius: 10px;
+  border-radius: 5px;
   width: 180px;
   height: auto;  
 
@@ -15,7 +15,8 @@
 
 .itemImg:hover{
 
- transform:scale(1.2); 
+ transform:scale(1.1); 
+
 
 
 
