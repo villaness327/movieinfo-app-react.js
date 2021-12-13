@@ -44,12 +44,9 @@ const {
         
         />
          
-        <Movieresults 
-          searchValue={searchValue}
-          results={results}
-          error={error}
+        <Movieresults         
+         
           movie={movie}
-
           onLoading={()=><Loading/>}
           onEmptySearchResults={()=><Emptysearchresults/>}
 
@@ -57,8 +54,8 @@ const {
 
               <Movieresultslist
 
-                 id={movies.imdbID}
-                 poster={movies.Poster}    
+                 id={movies.id}
+                 poster={movies.poster_path}    
                           
               
               />

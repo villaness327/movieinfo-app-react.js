@@ -8,18 +8,18 @@ function useFetchMovie(){
     const [movie,setMovie]=React.useState([]); //Estado que guarda los resultados
    
 
-    const fetchAPI=async(searchValue)=>{
+    const getPopularsMovies=async()=>{
 
-        const url = `https://www.omdbapi.com/?s=${searchValue}&type=movie&apikey=74d6303e`;  
-
-            try{                        
+    const url=`https://api.themoviedb.org/3/discover/movie?api_key=35bb9d253a7992789ec5df571fcc7e46&language=es&sort_by=popularity.desc&page=1`;
+           
+              try{                        
                 const response=await fetch(url);//Fetch a la API        
                     
                 const data=await response.json(); //Se convierte a JSON              
 
-               if (data.Search) {
-
-                    setMovie(data.Search);                   
+               if (data.results) {
+                 console.log(data.results);
+                    setMovie(data.results);                   
                     setResults(true);       
                 }   
                         
@@ -31,29 +31,20 @@ function useFetchMovie(){
             }
     }
      
-    React.useEffect(()=>{//use Effect se ejecuta cada vez que el estado searchValue cambia               
-     
+    React.useEffect(()=>{//use Effect se ejecuta cada vez que el estado searchValue cambia      
               
-        fetchAPI(searchValue);   
-        console.log(searchValue);
-        
-          
-       
-    },[searchValue]);
+        getPopularsMovies();   
+  
+               
+    },[]);
             
     return{//Este custom hook retorna las propiedades para componente App
-
 
         searchValue,
         results,
         error,
         setSearchValue,
         movie,
-  
-     
-   
-
-
     }
 }
 
