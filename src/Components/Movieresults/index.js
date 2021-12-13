@@ -17,5 +17,5 @@ function Movieresults(props){
      </section>
     );
 
-    }
+}
 export { Movieresults };

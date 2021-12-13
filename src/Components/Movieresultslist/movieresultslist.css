@@ -1,23 +1,24 @@
 
 
 .itemResult{
-  width: 100vw;
-  margin-left: 0;
+
+  display: inline-block;
+  margin-right: 10px;
+
 }
+
 
 .itemImg{
 
-  border-radius: 5px;
-  width: 180px;
+  width: 200px;
   height: auto;  
+  border-radius: 10px;
 
 }
 
+
 .itemImg:hover{
 
- transform:scale(1.1); 
-
-
-
+  opacity: 0.5;
 
 }
