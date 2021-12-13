@@ -14,6 +14,8 @@ function Movieresults(props){
 
                 <h2 className='popularMoviesTitle'>Peliculas más Populares</h2>          
                 <div className='carouselSearchContainer'>
+
+                {!!props.loading && props.onLoading()}    
                 {props.searchValue!=="" && props.movie.map(movies=>props.onRender(movies))}  
                 </div>                   
      </section>

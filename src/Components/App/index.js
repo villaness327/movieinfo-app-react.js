@@ -10,8 +10,6 @@ import{Emptysearchresults} from '../Emptysearchresults';
 import{Movieresultslist} from '../Movieresultslist';
 import{Moviefav} from '../Moviefav';
 import {Moviefavlist} from '../Moviefavlist';
-
-
 import {useFetchMovie} from './useFetchMovie'; 
 
  
@@ -19,7 +17,7 @@ function App() {
 
 const { 
   searchValue,
-  results,
+  loading,
   error,
   setSearchValue,
   movie,
@@ -37,35 +35,27 @@ const {
             <Moviemenu/>
         </Movieheader>
         
-        <Moviesearch   
-             
+        <Moviesearch                
           searchValue={searchValue}
-          setSearchValue={setSearchValue}
-        
+          setSearchValue={setSearchValue}        
         />
          
-        <Movieresults         
-         
+        <Movieresults          
           movie={movie}
+          loading={loading}
           onLoading={()=><Loading/>}
           onEmptySearchResults={()=><Emptysearchresults/>}
 
           onRender={movies=>(
 
               <Movieresultslist
-
                  id={movies.id}
-                 poster={movies.poster_path}    
-                          
-              
+                 poster={movies.poster_path}              
               />
           )}
-
          />       
-        <Moviefav>
-        
+        <Moviefav>        
             <Moviefavlist/> 
-
         </Moviefav >
     </React.Fragment>
   

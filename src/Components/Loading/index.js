@@ -5,7 +5,6 @@ function Loading(){
 
     return(
       <div className="loading"><p>Cargando...</p></div>
-
     );
 
 
