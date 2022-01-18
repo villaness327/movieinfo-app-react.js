@@ -1,0 +1,22 @@
+
+.searchresultslist--item{
+
+    width: 100%;
+    margin-left: 10px;
+    scroll-snap-align: center;
+
+}
+
+
+.itemImg{
+    width: 200px;
+    height: auto;  
+    border-radius: 10px;
+  }
+  
+  .itemImg:hover{
+    opacity: 0.6;
+  }
+  
+
+

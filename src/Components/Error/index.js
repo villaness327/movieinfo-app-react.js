@@ -5,7 +5,7 @@ function Error(props){
 
     return(
 
-      <p>Ocurrio un error {props.error}</p>
+        <p>Ocurrio un error {props.error}</p>
 
     );
 

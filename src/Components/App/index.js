@@ -1,8 +1,11 @@
 import React from 'react';
+
 import {Movieheader} from '../Movieheader';
 import {Movielogo} from '../Movielogo';
 import {Moviemenu} from '../Moviemenu';
 import {Moviesearch} from '../Moviesearch';
+import {Moviesearchresults} from '../Moviesearchresults';
+import {Moviesearchresultslist} from '../Moviesearchresultslist';
 import {Moviepopular} from '../Moviepopular';
 import {Loading} from '../Loading';
 import {Emptysearchresults} from '../Emptysearchresults';
@@ -21,6 +24,7 @@ const {
   error,
   setSearchValue,
   movie,
+  movieSearch,
 
 }=useFetchMovie(); //Llamada a custom hook
   
@@ -32,33 +36,58 @@ const {
             <Movielogo/>
             <Moviemenu/>
         </Movieheader>
-        
+    
         <Moviesearch                
-          searchValue={searchValue}
-          setSearchValue={setSearchValue}        
+            searchValue={searchValue} //estado 
+            setSearchValue={setSearchValue} //modificador del estado 
         />
-         
-        <Moviepopular          
-          movie={movie} //Array de peliculas
-          loading={loading} //estado loading
-          error={error}    
-          onLoading={()=><Loading/>} //funcion asociado al estado loading        
-          onError={()=><Error/>}
-          onEmptySearchResults={()=><Emptysearchresults/>}
 
-          onRender={movies=>(
-              <Moviepopularlist
-                 key={movies.id}
-                 poster={movies.poster_path}  
-                 title={movies.title}            
-              />
-          )}
-         />       
+       <Moviesearchresults
+            loading={loading}
+            error={error}
+            onLoading={()=><Loading/>} //funcion asociado al estado loading        
+            searchValue={searchValue} //estado            
+            onEmptySearchResults={()=><Emptysearchresults/>} //Componente en el caso de no resultados 
+            moviesearch={movieSearch} //Array de resultados
+
+
+            onRender={moviesearched=>(
+
+                <Moviesearchresultslist
+                      key={moviesearched.id}
+                      poster={moviesearched.poster_path}
+                      title={moviesearched.title}
+                />
+            )}
+          
+        />    
+      
+         
+        <Moviepopular    
+            loading={loading} //estado loading
+            error={error}    
+            onLoading={()=><Loading/>} //funcion asociado al estado loading        
+            onError={()=><Error/>}
+
+            movie={movie} //Array de peliculas
+            onRender={movies=>(
+                <Moviepopularlist
+                  key={movies.id}
+                  poster={movies.poster_path}  
+                  title={movies.title}            
+                />
+            )}
+         />  
+
+
         <Moviefav>        
             <Moviefavlist/> 
         </Moviefav >
-    </React.Fragment>
-  
+
+
+    </React.Fragment>  
   );
 }
+
+
 export {App};

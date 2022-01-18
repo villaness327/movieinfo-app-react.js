@@ -1,0 +1,32 @@
+.searchMoviesResultsContainer{  
+    width: 100%;
+
+    padding-left: 30px;
+  
+   }  
+
+   .searchMoviesResultsContainer h2{
+
+      font-size: 1.8rem;
+      color:white;
+      padding-top: 30px;
+      padding-bottom: 30px;
+   }
+
+   .searchMoviesResultsContainer--item{       
+    display: flex;
+    overflow-x: scroll;
+    overscroll-behavior-x:contain;
+    scroll-snap-type:proximity;
+   }
+
+   
+   .itemImg{
+     width: 200px;
+     height: auto;  
+     border-radius: 10px;
+   }
+   
+   .itemImg:hover{
+     opacity: 0.6;
+   }

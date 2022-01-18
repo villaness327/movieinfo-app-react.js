@@ -10,15 +10,15 @@ function Moviepopular(props){
     
     return(
 
-     <section className="popularMovies">  
+     <section className="popularMoviesContainer">  
 
                 <h2 className='popularMoviesTitle'>Películas más Populares</h2>           
 
                 {!!props.loading && props.onLoading()}   
                 {!!props.error && props.onError()} 
 
-                <div className='popularMoviesContainer'>
-                        {props.searchValue!=="" && props.movie.map(movies=>props.onRender(movies))}  
+                <div className='popularMoviesContainer--item'>
+                        {props.movie.map(movies=>props.onRender(movies))}  
                  </div>
                                  
      </section>
