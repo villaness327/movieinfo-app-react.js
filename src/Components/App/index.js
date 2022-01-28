@@ -34,7 +34,6 @@ const {
 
         <Movieheader>
             <Movielogo/>
-            <Moviemenu/>
         </Movieheader>
     
         <Moviesearch                
@@ -45,13 +44,14 @@ const {
        <Moviesearchresults
             loading={loading}
             error={error}
-            onLoading={()=><Loading/>} //funcion asociado al estado loading        
+            onLoading={()=><Loading/>} //funcion asociado al estado loading 
+            onError={()=><Error error={error}/>}       
             searchValue={searchValue} //estado            
             onEmptySearchResults={()=><Emptysearchresults/>} //Componente en el caso de no resultados 
             moviesearch={movieSearch} //Array de resultados
 
 
-            onRender={moviesearched=>(
+            onRender={moviesearched=>( //Render props
 
                 <Moviesearchresultslist
                       key={moviesearched.id}
@@ -67,10 +67,10 @@ const {
             loading={loading} //estado loading
             error={error}    
             onLoading={()=><Loading/>} //funcion asociado al estado loading        
-            onError={()=><Error/>}
+            onError={()=><Error error={error}/>}
 
             movie={movie} //Array de peliculas
-            onRender={movies=>(
+            onRender={movies=>( //Render props
                 <Moviepopularlist
                   key={movies.id}
                   poster={movies.poster_path}  
@@ -83,6 +83,10 @@ const {
         <Moviefav>        
             <Moviefavlist/> 
         </Moviefav >
+
+        <Moviemenu>
+         
+        </Moviemenu> 
 
 
     </React.Fragment>  

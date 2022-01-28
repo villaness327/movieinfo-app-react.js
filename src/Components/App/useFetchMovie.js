@@ -12,7 +12,7 @@ function useFetchMovie(){
     const [movieSearch, setMovieSearch]=React.useState([]);// Estado que guarda resultado busqueda
    
 
-    const getPopularsMovies=async()=>{ //Se consulta automaticamente por las pelicula + populares
+    const getPopularsMovies=async()=>{ //Se consulta automaticamente por las pelicula + populares a la API
 
       const url=`${baseUrl}api_key=${key}&language=es&sort_by=popularity.desc&page=1`;
           
